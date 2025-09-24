@@ -2,20 +2,22 @@
 @import url('https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css');
 
 /* Custom Styles for Neon Accent, Darkmode, Animations */
+/* Minimalistisches, modernes Design */
 :root {
-  --accent: #a21caf; /* Neon Violet */
-  --accent-alt: #22d3ee; /* Neon Green alternative */
+  --accent: #6366f1; /* Schlichteres Blau */
+  --accent-alt: #818cf8;
 }
 
 body {
   font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
-  background: #0f172a;
-  color: #f1f5f9;
+  background: #18181b;
+  color: #f3f4f6;
   transition: background 0.3s, color 0.3s;
+  line-height: 1.7;
 }
 
 .darkmode {
-  background: #18181b;
+  background: #111113;
   color: #e0e7ef;
 }
 
@@ -30,30 +32,32 @@ body {
 .btn-accent {
   background: var(--accent);
   color: #fff;
+  border-radius: 0.375rem;
+  padding: 0.5rem 1.25rem;
+  font-weight: 500;
+  box-shadow: none;
+  border: none;
   transition: background 0.2s, color 0.2s;
 }
-
 .btn-accent:hover {
   background: var(--accent-alt);
-  color: #18181b;
+  color: #fff;
 }
 
 .section {
   scroll-margin-top: 80px;
+  margin-bottom: 2rem;
 }
 
-/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-/* Simple fade-in animation */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.8s forwards;
 }
-
 @keyframes fadeInUp {
   to {
     opacity: 1;
@@ -61,34 +65,52 @@ html {
   }
 }
 
-/* Icon sizing */
 .icon {
-  width: 1.5em;
-  height: 1.5em;
+  width: 1.4em;
+  height: 1.4em;
   display: inline-block;
   vertical-align: middle;
 }
 
-/* Contact form */
 input, textarea {
-  background: #1e293b;
-  color: #f1f5f9;
-  border: 1px solid #334155;
+  background: #23272f;
+  color: #f3f4f6;
+  border: 1px solid #2d3340;
   border-radius: 0.375rem;
   padding: 0.5rem 1rem;
   margin-bottom: 1rem;
   width: 100%;
+  font-size: 1rem;
 }
 input:focus, textarea:focus {
   outline: none;
   border-color: var(--accent);
 }
 
-/* Darkmode switch */
 #darkmode-toggle {
   cursor: pointer;
   transition: color 0.2s;
 }
 #darkmode-toggle:hover {
   color: var(--accent);
+}
+
+/* Projektkarten minimalistisch */
+.project-card {
+  background: #23272f;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: none;
+  border: 1px solid #23272f;
+  transition: border 0.2s, transform 0.2s;
+}
+.project-card:hover {
+  border: 1.5px solid var(--accent);
+  transform: translateY(-4px) scale(1.01);
+}
+
+/* Mehr Weißraum */
+.max-w-5xl, .max-w-4xl, .max-w-3xl {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }

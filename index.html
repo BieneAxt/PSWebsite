@@ -1,12 +1,220 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BieneAxt | IT-Entwickler & Roblox Game Entwickler</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Heroicons CDN -->
+    <script src="https://unpkg.com/feather-icons"></script>
 </head>
 <body>
-    <h1>TEST</h1>
+    <!-- Darkmode Switch -->
+    <div class="fixed top-4 right-4 z-50">
+        <button id="darkmode-toggle" aria-label="Darkmode umschalten" class="text-xl">
+            <svg id="icon-moon" class="icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z"/></svg>
+            <svg id="icon-sun" class="icon hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2m0 18v2m11-11h-2M3 12H1m16.95 6.95l-1.41-1.41M6.34 6.34L4.93 4.93m12.02 0l-1.41 1.41M6.34 17.66l-1.41 1.41"/></svg>
+        </button>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="w-full fixed top-0 left-0 bg-[#0f172a]/80 backdrop-blur z-40 border-b border-[#1e293b]">
+        <div class="max-w-5xl mx-auto flex justify-between items-center px-4 py-3">
+            <span class="font-bold text-xl accent">BieneAxt</span>
+            <ul class="flex gap-6 text-sm">
+                <li><a href="#hero" class="hover:accent transition">Home</a></li>
+                <li><a href="#about" class="hover:accent transition">Über mich</a></li>
+                <li><a href="#skills" class="hover:accent transition">Skills</a></li>
+                <li><a href="#projects" class="hover:accent transition">Projekte</a></li>
+                <li><a href="#edu" class="hover:accent transition">Ausbildung</a></li>
+                <li><a href="#contact" class="hover:accent transition">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="section min-h-screen flex flex-col justify-center items-center text-center fade-in pt-24">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4">BieneAxt</h1>
+        <h2 class="text-xl md:text-2xl font-semibold mb-2 accent">IT-Entwickler & Roblox Game Entwickler</h2>
+        <p class="text-lg md:text-xl mb-6">"Code. Create. Connect. – Digitale Lösungen & kreative Spielewelten."</p>
+        <a href="#contact" class="btn-accent px-6 py-2 rounded font-semibold shadow-lg">Kontakt aufnehmen</a>
+    </section>
+
+    <!-- Über mich -->
+    <section id="about" class="section max-w-3xl mx-auto py-16 fade-in">
+        <h3 class="text-2xl font-bold mb-4 accent">Über mich</h3>
+        <p class="mb-2">Hi, ich bin BieneAxt – leidenschaftlicher Entwickler mit Fokus auf IT-Lösungen und Roblox-Spiele. Ich habe meine Ausbildung als <b>Informationstechnischer Assistent mit Fachhochschulreife</b> am Heinrich-Hertz-Europakolleg abgeschlossen und liebe es, innovative Projekte umzusetzen.</p>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section max-w-4xl mx-auto py-16 fade-in">
+        <h3 class="text-2xl font-bold mb-4 accent">Skills</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+                <h4 class="font-semibold mb-2">Programmiersprachen</h4>
+                <ul class="list-disc list-inside space-y-1">
+                    <li>Lua</li>
+                    <li>C#</li>
+                    <li>SQL</li>
+                    <li>HTML/CSS</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-2">Frameworks & Tools</h4>
+                <ul class="list-disc list-inside space-y-1">
+                    <li>Roblox Studio</li>
+                    <li>Blazor</li>
+                    <li>Entity Framework Core</li>
+                    <li>Radzen</li>
+                    <li>Azure</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projekte -->
+    <section id="projects" class="section max-w-5xl mx-auto py-16 fade-in">
+        <h3 class="text-2xl font-bold mb-4 accent">Projekte</h3>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-[#1e293b] rounded-lg p-6 shadow-lg hover:scale-105 transition-transform">
+                <div class="flex items-center mb-2">
+                    <span class="icon" data-feather="grid"></span>
+                    <span class="ml-2 font-semibold">Roblox Spleef-Spiel</span>
+                </div>
+                <p class="text-sm mb-2">Multiplayer-Spiel mit Shop-System, Power-Ups und Leaderboard. Fokus auf Gameplay-Design und Monetarisierung.</p>
+            </div>
+            <div class="bg-[#1e293b] rounded-lg p-6 shadow-lg hover:scale-105 transition-transform">
+                <div class="flex items-center mb-2">
+                    <span class="icon" data-feather="globe"></span>
+                    <span class="ml-2 font-semibold">BTMasterWebLite</span>
+                </div>
+                <p class="text-sm mb-2">Blazor-Webanwendung zur Verwaltung von Bluetooth-Geräten. Responsive UI, Authentifizierung, Datenbankanbindung.</p>
+            </div>
+            <div class="bg-[#1e293b] rounded-lg p-6 shadow-lg hover:scale-105 transition-transform">
+                <div class="flex items-center mb-2">
+                    <span class="icon" data-feather="activity"></span>
+                    <span class="ml-2 font-semibold">Monitoring-System</span>
+                </div>
+                <p class="text-sm mb-2">Eigenes System zur Überwachung von IT-Netzwerken. Visualisierung, Benachrichtigungen, Auswertung von Logs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ausbildung & Erfahrung -->
+    <section id="edu" class="section max-w-4xl mx-auto py-16 fade-in">
+        <h3 class="text-2xl font-bold mb-4 accent">Ausbildung & Erfahrung</h3>
+        <ul class="space-y-4">
+            <li>
+                <div class="flex items-center">
+                    <span class="icon" data-feather="book-open"></span>
+                    <span class="ml-2 font-semibold">Heinrich-Hertz-Europakolleg</span>
+                </div>
+                <div class="ml-8 text-sm">Informationstechnischer Assistent mit Fachhochschulreife (2022)</div>
+            </li>
+            <li>
+                <div class="flex items-center">
+                    <span class="icon" data-feather="briefcase"></span>
+                    <span class="ml-2 font-semibold">Praktikum: soITbe IT-Solutions</span>
+                </div>
+                <div class="ml-8 text-sm">Mitarbeit an Web- und Datenbankprojekten, IT-Support</div>
+            </li>
+            <li>
+                <div class="flex items-center">
+                    <span class="icon" data-feather="award"></span>
+                    <span class="ml-2 font-semibold">Abschlussprojekte</span>
+                </div>
+                <div class="ml-8 text-sm">Roblox-Spielentwicklung, Blazor-Webanwendung, Monitoring-System</div>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Kontakt -->
+    <section id="contact" class="section max-w-3xl mx-auto py-16 fade-in">
+        <h3 class="text-2xl font-bold mb-4 accent">Kontakt</h3>
+        <div class="flex flex-col md:flex-row gap-8">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center">
+                    <span class="icon" data-feather="mail"></span>
+                    <a href="mailto:bieneaxt@example.com" class="ml-2 hover:accent">bieneaxt@example.com</a>
+                </div>
+                <div class="flex items-center">
+                    <span class="icon" data-feather="github"></span>
+                    <a href="https://github.com/BieneAxt" target="_blank" class="ml-2 hover:accent">GitHub</a>
+                </div>
+                <div class="flex items-center">
+                    <span class="icon" data-feather="linkedin"></span>
+                    <a href="https://linkedin.com/in/bieneaxt" target="_blank" class="ml-2 hover:accent">LinkedIn</a>
+                </div>
+            </div>
+            <form class="flex-1" name="contact" autocomplete="off" onsubmit="return false;">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="E-Mail" required>
+                <textarea name="message" rows="4" placeholder="Nachricht" required></textarea>
+                <button type="submit" class="btn-accent px-4 py-2 rounded font-semibold w-full">Absenden</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="text-center py-6 text-xs text-[#64748b]">
+        &copy; 2025 BieneAxt. Portfolio erstellt mit HTML5 & TailwindCSS.
+    </footer>
+
+    <script>
+        // Feather Icons laden
+        feather.replace();
+
+        // Darkmode Toggle
+        const toggle = document.getElementById('darkmode-toggle');
+        const body = document.body;
+        const iconMoon = document.getElementById('icon-moon');
+        const iconSun = document.getElementById('icon-sun');
+        function setDarkmode(on) {
+            if (on) {
+                body.classList.add('darkmode');
+                iconMoon.classList.add('hidden');
+                iconSun.classList.remove('hidden');
+                localStorage.setItem('darkmode', '1');
+            } else {
+                body.classList.remove('darkmode');
+                iconMoon.classList.remove('hidden');
+                iconSun.classList.add('hidden');
+                localStorage.setItem('darkmode', '0');
+            }
+        }
+        toggle.addEventListener('click', () => {
+            setDarkmode(!body.classList.contains('darkmode'));
+        });
+        // Initial Darkmode-Status
+        if (localStorage.getItem('darkmode') === '1' || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            setDarkmode(true);
+        }
+
+        // Fade-in Animation beim Scrollen
+        function revealOnScroll() {
+            document.querySelectorAll('.fade-in').forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 60) {
+                    el.style.animationDelay = '0.1s';
+                    el.classList.add('animate-fadeInUp');
+                }
+            });
+        }
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('DOMContentLoaded', revealOnScroll);
+
+        // Smooth Scroll für Navigation (Fallback)
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href.startsWith('#')) {
+                    e.preventDefault();
+                    document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
